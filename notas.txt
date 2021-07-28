@@ -1,3 +1,5 @@
+
+Cambios
 /*Existen los metodos Filter, ForEach , Map and Find tienen en comun que reciben 
 una funcion callback que permite 3 atributos:
 elemento
