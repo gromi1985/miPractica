@@ -1,0 +1,50 @@
+/*Existen los metodos Filter, ForEach , Map and Find tienen en comun que reciben 
+una funcion callback que permite 3 atributos:
+elemento
+indice
+arreglo
+El método Filter crea un nuevo arreglo, el cual no busca modificar el valor de 
+los elementos para el nuevo arreglo, únicamente retorna aquellos elementos que cumplan
+con las condiciones del filtro, los cuales serán almacenados en otro arreglo
+ */
+
+ const array = [
+  { id: 1, username: "Mapper"},
+  { id: 2, username: "Finder"},
+  { id: 3, username: "Eaching"}
+];
+
+console.log(array.filter (elemento=> elemento.id > 1));
+
+/*
+El método Map tambien se encarga de crear un nuevo arreglo al igual que el metodo 
+Filter con los elementos modificados.
+*/
+
+console.log(array.map (elemento=> elemento.id *11)); //{11,22,33}
+
+/*
+El metodo find devuelve el primer elemento que cumpla la condicion indicada
+*/
+
+const array =['anita','tatiana','sariana'];
+
+console.log(array.find(elemento))
+
+
+/*
+El método ForEach únicamente ejecuta la función callback que definimos, 
+en el siguiente ejemplo únicamente muestra como salida cada elemento del arreglo. 
+Cabe destacar, que no retorna ningún valor ni tampoco un arreglo como los métodos 
+anteriores.
+*/
+
+
+//NaN es el único valor de JavaScript que no es igual a sí mismo!!!
+console.log(NaN === NaN); // false
+console.log(NaN !== NaN); // true
+//¿Y cómo sabré cuando un valor no es un número?
+console.log(123 === NaN); // false
+console.log("abc" === NaN); // false, cuando debería ser true
+
+Para saber si un valor no es un número usaremos el método Number.isNaN():
